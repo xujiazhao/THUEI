@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import { asset } from '../utils/asset'
 import './Navbar.css'
 
 export default function Navbar({ onJoinClick }) {
@@ -66,7 +67,7 @@ export default function Navbar({ onJoinClick }) {
       <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''} ${!isHome ? 'navbar--light' : ''}`}>
         <div className="navbar__inner container">
           <Link to="/" className="navbar__logo">
-            <img src="/images/branding/THUEIlogo.svg" alt="THUEI" className="navbar__logo-img" />
+            <img src={asset('/images/branding/THUEIlogo.svg')} alt="THUEI" className="navbar__logo-img" />
             <span className="navbar__logo-text">清华MBA具身智能俱乐部</span>
           </Link>
 

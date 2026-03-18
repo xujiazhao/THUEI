@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { asset } from '../utils/asset'
 import './Footer.css'
 
 export default function Footer({ onJoinClick }) {
@@ -8,7 +9,7 @@ export default function Footer({ onJoinClick }) {
         <div className="footer__top">
           <div className="footer__brand">
             <div className="footer__logo">
-              <img src="/images/branding/THUEIlogo.svg" alt="THUEI" className="footer__logo-img" />
+              <img src={asset('/images/branding/THUEIlogo.svg')} alt="THUEI" className="footer__logo-img" />
               <span className="footer__logo-text">清华MBA具身智能俱乐部</span>
             </div>
             <p className="footer__slogan">
@@ -28,11 +29,11 @@ export default function Footer({ onJoinClick }) {
               </a>
               <div className="footer__qr-row">
                 <div className="footer__qr">
-                  <img src="/qrs/subsaccount.png" alt="订阅号" />
+                  <img src={asset('/qrs/subsaccount.png')} alt="订阅号" />
                   <span>订阅号</span>
                 </div>
                 <div className="footer__qr">
-                  <img src="/qrs/videoaccount.png" alt="视频号" />
+                  <img src={asset('/qrs/videoaccount.png')} alt="视频号" />
                   <span>视频号</span>
                 </div>
               </div>

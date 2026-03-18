@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 import { useCounter } from '../hooks/useCounter'
+import { asset } from '../utils/asset'
 import './Home.css'
 
 /* ---- Sub-components ---- */
@@ -21,17 +22,17 @@ function StatItem({ number, suffix, label, isVisible }) {
 
 const activityTypes = [
   {
-    image: '/images/sharing.webp',
+    image: asset('/images/sharing.webp'),
     title: '行业专家分享',
     description: '邀请具身智能领域领军者解析前沿趋势与商业化路径，深度探讨技术变革与产业机遇',
   },
   {
-    image: '/images/grouping.webp',
+    image: asset('/images/grouping.webp'),
     title: '创新小组实践',
     description: '通过场景化项目孵化跨学科协作能力，探索具身智能在服务、工业等领域的应用落地',
   },
   {
-    image: '/images/topicdis.webp',
+    image: asset('/images/topicdis.webp'),
     title: '专题研究会',
     description: '组织跨界研讨聚焦技术突破与产业落地挑战，推动算法、硬件与场景融合的务实对话',
   },
@@ -146,7 +147,7 @@ export default function Home({ onJoinClick }) {
   return (
     <div className="home">
       {/* ===== Hero ===== */}
-      <section className="hero">
+      <section className="hero" style={{ '--hero-bg': `url(${asset('/images/banner.webp')})` }}>
         <div className="hero__glow" />
         <div className="hero__grid" />
         <div className="hero__content">
@@ -287,7 +288,7 @@ export default function Home({ onJoinClick }) {
       {/* ===== CTA ===== */}
       <section className="cta-section">
         <div className="container">
-          <div className="cta-card">
+          <div className="cta-card" style={{ '--cta-bg': `url(${asset('/images/joinusbg.webp')})` }}>
             <h2 className="cta-card__title">与我们一起，探索具身智能的未来</h2>
             <button className="btn btn-primary" onClick={onJoinClick}>
               立即加入

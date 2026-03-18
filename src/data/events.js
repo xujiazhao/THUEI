@@ -1,3 +1,5 @@
+import { asset } from '../utils/asset'
+
 export const timelineEvents = [
   { date: '2024.12.09', title: '俱乐部成立', type: 'milestone' },
   { date: '2025.02.21', title: '俱乐部社群建立', type: 'milestone' },
@@ -18,7 +20,7 @@ export const eventDetails = [
   {
     date: '2025.12.24',
     title: '俱乐部一周年特别活动',
-    image: '/events/20251224.png',
+    image: asset('/events/20251224.png'),
     guest: '多位学界、产业界、投资界嘉宾',
     attendees: '300+人',
     description:
@@ -27,7 +29,7 @@ export const eventDetails = [
   {
     date: '2025.10.12',
     title: '「开启人形机器人生产力时代」专题分享会',
-    image: '/events/20251012.png',
+    image: asset('/events/20251012.png'),
     guest: '王鹤 — 银河通用创始人、北京大学前沿计算研究中心助理教授',
     attendees: '线下约150人',
     description:
@@ -36,7 +38,7 @@ export const eventDetails = [
   {
     date: '2025.06.20',
     title: '松延动力人形机器人企业参访',
-    image: '/events/20250620.png',
+    image: asset('/events/20250620.png'),
     guest: '姜哲源 — 松延动力创始人兼CEO',
     attendees: '线下约30人',
     description:
@@ -45,7 +47,7 @@ export const eventDetails = [
   {
     date: '2025.05.12',
     title: 'AI及具身智能专场招聘会',
-    image: '/events/20250512.png',
+    image: asset('/events/20250512.png'),
     guest: '宇树科技、自变量机器人、银河通用、阶跃星辰、智谱AI、海天瑞声、软通动力等',
     attendees: '嘉宾15人，同学60+人',
     description:
@@ -54,7 +56,7 @@ export const eventDetails = [
   {
     date: '2025.04.13',
     title: '「从产业视角看具身智能发展」闭门会',
-    image: '/events/20250413.png',
+    image: asset('/events/20250413.png'),
     guest: '秦玉森、陈敏杰、朱恒源教授、赵明国研究员等',
     attendees: '5+ 投资者、10+ 创始人、20+ 研究者',
     description:
@@ -63,7 +65,7 @@ export const eventDetails = [
   {
     date: '2025.03.15',
     title: '加速进化创始人程昊专场分享',
-    image: '/events/20250315.png',
+    image: asset('/events/20250315.png'),
     guest: '程昊 — 加速进化创始人&CEO，前飞书产品副总裁',
     attendees: '线下约100人，线上400+人',
     description:
@@ -72,7 +74,7 @@ export const eventDetails = [
   {
     date: '2025.03.08',
     title: 'inSpace创始人唐沐专场分享',
-    image: '/events/20250308.png',
+    image: asset('/events/20250308.png'),
     guest: '唐沐 — inSpace影智创始人&CEO，原小米生态链副总裁',
     attendees: '线下80人，线上300+人',
     description:
