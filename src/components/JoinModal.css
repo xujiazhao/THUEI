@@ -1,0 +1,147 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: modalFadeIn 0.2s ease;
+}
+
+.modal {
+  background: var(--color-bg);
+  border-radius: var(--radius-xl);
+  padding: 48px;
+  max-width: 480px;
+  width: 100%;
+  position: relative;
+  animation: modalSlideUp 0.3s ease;
+}
+
+.modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 0;
+  color: var(--color-text-tertiary);
+  transition: all var(--transition-fast);
+}
+
+.modal__close:hover {
+  background: var(--color-bg-secondary);
+  color: var(--color-text);
+}
+
+.modal__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  background: var(--color-primary-bg);
+  border: 1px solid var(--color-primary-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.modal__title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.modal__desc {
+  font-size: 15px;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.modal__methods {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modal__method {
+  display: flex;
+  gap: 16px;
+  padding: 20px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+}
+
+.modal__method:hover {
+  border-color: var(--color-primary-border);
+  background: var(--color-primary-bg);
+}
+
+.modal__method-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+}
+
+.modal__method h4 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.modal__method p {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+.modal__method a {
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+.modal__method a:hover {
+  text-decoration: underline;
+}
+
+.modal__note {
+  font-size: 12px;
+  color: var(--color-text-tertiary);
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modalSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .modal {
+    padding: 32px 24px;
+  }
+}

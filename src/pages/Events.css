@@ -1,0 +1,242 @@
+/* ============================
+   Events Page Styles
+   ============================ */
+
+/* ---- Spacer ---- */
+.events-page__spacer {
+  height: 0;
+}
+
+/* ---- Horizontal Timeline ---- */
+.timeline-section.section {
+  padding-bottom: 0;
+  padding-top: 160px;
+}
+
+.timeline-section .section-header {
+  margin-bottom: 32px;
+}
+
+.timeline-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--color-text-tertiary);
+  margin-top: 8px;
+}
+
+.timeline-scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0 var(--container-padding);
+  cursor: grab;
+  -webkit-overflow-scrolling: touch;
+}
+
+.timeline-scroll::-webkit-scrollbar {
+  height: 4px;
+}
+
+.timeline-scroll::-webkit-scrollbar-track {
+  background: var(--color-border-light);
+}
+
+.timeline-scroll::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+}
+
+.timeline {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  position: relative;
+  padding: 40px 0 60px;
+  min-width: max-content;
+}
+
+.timeline__line {
+  position: absolute;
+  top: 46px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--color-border);
+}
+
+.timeline__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-width: 180px;
+  max-width: 200px;
+  padding: 0 30px;
+  position: relative;
+}
+
+.timeline__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: var(--color-primary);
+  z-index: 1;
+  flex-shrink: 0;
+  margin-bottom: 16px;
+  transition: all var(--transition-base);
+}
+
+.timeline__dot--milestone {
+  background: var(--color-primary);
+}
+
+.timeline__item:hover .timeline__dot {
+  box-shadow: 0 0 0 4px var(--color-primary-bg);
+}
+
+.timeline__date {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-tertiary);
+  font-variant-numeric: tabular-nums;
+  margin-bottom: 6px;
+  white-space: nowrap;
+}
+
+.timeline__title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+/* ---- Event Cards ---- */
+.events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.event-card {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-base);
+  background: var(--color-bg);
+  overflow: hidden;
+  height: 200px;
+}
+
+.event-card:hover {
+  border-color: var(--color-primary-border);
+  box-shadow: var(--shadow-md);
+}
+
+.event-card__img-wrap {
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  overflow: hidden;
+}
+
+.event-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-slow);
+}
+
+.event-card:hover .event-card__img {
+  transform: scale(1.03);
+}
+
+.event-card__content {
+  padding: 28px 32px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.event-card__date {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-primary);
+  font-variant-numeric: tabular-nums;
+  position: absolute;
+  top: 28px;
+  right: 32px;
+}
+
+.event-card__title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.event-card__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.event-card__guest,
+.event-card__attendees {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  line-height: 1.4;
+}
+
+.event-card__guest svg,
+.event-card__attendees svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.event-card__desc {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .event-card {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .event-card__img-wrap {
+    height: 200px;
+    min-height: unset;
+    max-height: unset;
+  }
+
+  .event-card__date {
+    position: static;
+    margin-top: auto;
+    padding-top: 12px;
+  }
+
+  .event-card__content {
+    padding: 24px;
+  }
+
+  .timeline-scroll {
+    padding: 0 16px;
+  }
+
+  .timeline__item {
+    min-width: 120px;
+  }
+}
